@@ -108,6 +108,16 @@ int findMaxNum(int arr[], int n) {
     }
 }
 
+int findMax(int arr[], int L, int R) {
+    if (L == R) {
+        return arr[L];
+    } else if (arr[L] > findMax(arr, L+1, R)) {
+        return arr[L];
+    } else {
+        return findMax(arr, L+1, R);
+    }
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         int num ;
@@ -125,9 +135,13 @@ int main(int argc, const char * argv[]) {
         num = sum1(arr,7);
         printf("前7项的和为%d\n",num);
         
-        int arr1[] = {7, 4, 8, 6, 8, 9, 11, 5};
+        int arr1[] = {7, 4, 8, 6, 8, 9, 11, 16};
         num = findMaxNum(arr1, 7);
         printf("前7项的最大值为%d\n",num);
+        
+        int res = findMax(arr1, 0, 7);
+        NSLog(@"%d",res);
     }
     return 0;
 }
+
