@@ -124,21 +124,21 @@ int main(int argc, const char * argv[]) {
         
         num = find(6);
         printf("第6项的值为%d\n",num);
-        
+
         num = fibonacci(6);
         printf("第6项的值为%d\n",num);
-        
+
         num = sum(100);
         printf("前100项的和为%d\n",num);
-        
+
         int arr[] = {1, 7, 8, 6, 8, 9, 0, 10};
         num = sum1(arr,7);
         printf("前7项的和为%d\n",num);
-        
+
         int arr1[] = {7, 4, 8, 6, 8, 9, 11, 16};
         num = findMaxNum(arr1, 7);
         printf("前7项的最大值为%d\n",num);
-        
+
         int res = findMax(arr1, 0, 7);
         NSLog(@"%d",res);
     }
